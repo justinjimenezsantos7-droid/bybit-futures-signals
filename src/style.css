@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+select {
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.card strong {
+  font-size: 28px;
+  color: #22c55e;
+}
+
+.card h3 {
+  margin-top: 25px;
+}
