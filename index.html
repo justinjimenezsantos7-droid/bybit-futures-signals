@@ -152,3 +152,28 @@ AI Profit Dashboard © 2026
 </script>
 </body>
 </html>
+<div class="card">
+<h2>👤 Usuario</h2>
+<p>Bienvenido</p>
+<div class="card">
+<h2>📱 Crear cuenta</h2>
+
+<input id="phone" type="tel" placeholder="Número de teléfono"
+style="width:100%;padding:12px;border-radius:10px;border:none;">
+
+<button onclick="loginPhone()">
+Enviar código SMS
+</button>
+
+<div id="recaptcha-container"></div>
+
+<input id="code" type="text" placeholder="Código SMS"
+style="width:100%;padding:12px;border-radius:10px;border:none;margin-top:10px;">
+
+<button onclick="verifyCode()">
+Verificar código
+</button>
+
+<p id="message"></p>
+
+</div>
