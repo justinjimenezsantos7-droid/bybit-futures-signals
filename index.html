@@ -147,7 +147,59 @@ AI Profit Dashboard © 2026
 
   const auth = getAuth(app);
   const db = getFirestore(app);
+<script type="module">
 
+import { 
+  RecaptchaVerifier,
+  signInWithPhoneNumber
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+let confirmationResult;
+
+window.loginPhone = function(){
+
+  const phone = document.getElementById("phone").value;
+
+  window.recaptchaVerifier = new RecaptchaVerifier(
+    "recaptcha-container",
+    {
+      size: "normal"
+    },
+    auth
+  );
+
+  signInWithPhoneNumber(auth, phone, window.recaptchaVerifier)
+  .then((result)=>{
+      confirmationResult = result;
+      document.getElementById("message").innerHTML =
+      "Código enviado ✅";
+  })
+  .catch((error)=>{
+      document.getElementById("message").innerHTML =
+      error.message;
+  });
+}
+
+
+window.verifyCode = function(){
+
+ const code = document.getElementById("code").value;
+
+ confirmationResult.confirm(code)
+ .then((result)=>{
+
+   document.getElementById("message").innerHTML =
+   "Usuario creado correctamente ✅";
+
+ })
+ .catch(()=>{
+   document.getElementById("message").innerHTML =
+   "Código incorrecto";
+ });
+
+}
+
+</script>
   console.log("Firebase conectado correctamente");
 </script>
 </body>
