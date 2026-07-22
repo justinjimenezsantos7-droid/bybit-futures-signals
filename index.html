@@ -128,6 +128,27 @@ Copiar enlace
 AI Profit Dashboard © 2026
 </div>
 
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyBBp8iFLmFRHc3Lcjya-KRGOqfFCv-JH68",
+    authDomain: "ai-profit-dashboard.firebaseapp.com",
+    projectId: "ai-profit-dashboard",
+    storageBucket: "ai-profit-dashboard.firebasestorage.app",
+    messagingSenderId: "400326708621",
+    appId: "1:400326708621:web:aff1b1de82d8b8ca5801c4",
+    measurementId: "G-CNN5MYJNVM"
+  };
+
+  const app = initializeApp(firebaseConfig);
+
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  console.log("Firebase conectado correctamente");
+</script>
 </body>
 </html>
