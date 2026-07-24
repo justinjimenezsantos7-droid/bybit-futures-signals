@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IA Dinero Digital</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f7fb;
+  color: #111;
+}
+
+header {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+.btn {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+.price {
+  font-size: 32px;
+  color: #2563eb;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🚀 IA Dinero Digital</h1>
+<p>Aprende a usar inteligencia artificial para crear contenido y mejorar tus proyectos online.</p>
+
+<a class="btn" href="#">
+Obtener Pack por US$9
+</a>
+</header>
+
+
+<section>
+
+<div class="card">
+<h2>📦 Pack 100 Prompts de IA</h2>
+<p>Una colección de prompts listos para usar con herramientas de inteligencia artificial.</p>
+</div>
+
+
+<div class="card">
+<h2>Incluye:</h2>
+<ul>
+<li>✅ Prompts para negocios</li>
+<li>✅ Prompts para redes sociales</li>
+<li>✅ Ideas de contenido</li>
+<li>✅ Automatización con IA</li>
+</ul>
+</div>
+
+
+<div class="card">
+<h2>Oferta especial</h2>
+<p class="price">US$9</p>
+<p>Acceso digital inmediato.</p>
+</div>
+
+
+<div class="card">
+<h2>¿Listo para empezar?</h2>
+<a class="btn" href="#">
+Comprar ahora
+</a>
+</div>
+
+</section>
+
+</body>
+</html>
