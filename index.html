@@ -1,57 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Profit Dashboard</title>
+
+<title>IA Dinero Digital</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b1220;
-  color: white;
+*{
+    box-sizing:border-box;
 }
 
-.header {
-  padding: 25px;
-  text-align: center;
-  background: #111827;
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#080d18;
+    color:white;
 }
 
-.card {
-  background: #1f2937;
-  margin: 15px;
-  padding: 20px;
-  border-radius: 15px;
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
 }
 
-.balance {
-  font-size: 32px;
-  color: #22c55e;
+.hero{
+    text-align:center;
+    padding:60px 20px;
 }
 
-button {
-  width: 100%;
-  padding: 15px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 10px;
-  background: #2563eb;
-  color: white;
-  font-size: 16px;
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#00e5ff;
 }
 
-.task {
-  background: #374151;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 10px;
+h1{
+    font-size:42px;
 }
 
-.footer {
-  text-align:center;
-  padding:20px;
-  color:#9ca3af;
+h2{
+    color:#00e5ff;
+}
+
+p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 35px;
+    background:#00e676;
+    color:#000;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.card{
+    background:#121a2b;
+    padding:25px;
+    border-radius:15px;
+    margin:25px 0;
+}
+
+li{
+    margin:12px 0;
+    font-size:18px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#aaa;
 }
 </style>
 
@@ -59,173 +82,76 @@ button {
 
 <body>
 
-<div class="header">
-<h1>🚀 AI Profit Dashboard</h1>
-<p>Plataforma de recompensas digitales</p>
+<div class="container">
+
+<section class="hero">
+
+<div class="logo">
+🤖 IA Dinero Digital
 </div>
 
+<h1>
+100 Prompts de IA para Crear Ingresos Online
+</h1>
 
-<div class="card">
-<h2>👤 Usuario</h2>
-<p>Bienvenido</p>
+<p>
+Descubre cómo usar inteligencia artificial para crear contenido,
+generar ideas de negocio y trabajar más rápido.
+</p>
 
-<h3>Balance</h3>
-<div class="balance">
-0.00 USDT
-</div>
-</div>
+<a href="#" class="btn">
+Comprar ahora - $9 USD
+</a>
 
-
-<div class="card">
-<h2>✅ Tareas disponibles</h2>
-
-<div class="task">
-📌 Completar tarea diaria
-<br>
-Recompensa: 0.10 USDT
-</div>
-
-<div class="task">
-📌 Compartir promoción
-<br>
-Recompensa: 0.20 USDT
-</div>
-
-<button>
-Ver tareas
-</button>
-
-</div>
+</section>
 
 
 <div class="card">
 
-<h2>💰 Retirar USDT</h2>
+<h2>🚀 ¿Qué incluye?</h2>
 
-<p>Red: TRC20</p>
-
-<button>
-Solicitar retiro
-</button>
+<ul>
+<li>✅ 100 prompts profesionales de inteligencia artificial</li>
+<li>✅ Ideas de negocios digitales</li>
+<li>✅ Prompts para marketing y redes sociales</li>
+<li>✅ Herramientas para ahorrar tiempo</li>
+</ul>
 
 </div>
 
 
 <div class="card">
 
-<h2>📢 Referidos</h2>
+<h2>💡 ¿Para quién es?</h2>
 
-<p>Invita usuarios y gana comisiones.</p>
-
-<button>
-Copiar enlace
-</button>
+<p>
+Para emprendedores, creadores de contenido y personas
+que quieren aprovechar el poder de la IA.
+</p>
 
 </div>
 
 
-<div class="footer">
-AI Profit Dashboard © 2026
+<div class="card">
+
+<h2>🔥 Empieza hoy</h2>
+
+<p>
+Obtén tu pack digital y empieza a crear con inteligencia artificial.
+</p>
+
+<a href="#" class="btn">
+Quiero mi Pack
+</a>
+
 </div>
 
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-  import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyBBp8iFLmFRHc3Lcjya-KRGOqfFCv-JH68",
-    authDomain: "ai-profit-dashboard.firebaseapp.com",
-    projectId: "ai-profit-dashboard",
-    storageBucket: "ai-profit-dashboard.firebasestorage.app",
-    messagingSenderId: "400326708621",
-    appId: "1:400326708621:web:aff1b1de82d8b8ca5801c4",
-    measurementId: "G-CNN5MYJNVM"
-  };
+<footer>
+© 2026 IA Dinero Digital
+</footer>
 
-  const app = initializeApp(firebaseConfig);
+</div>
 
-  const auth = getAuth(app);
-  const db = getFirestore(app);
-<script type="module">
-
-import { 
-  RecaptchaVerifier,
-  signInWithPhoneNumber
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
-let confirmationResult;
-
-window.loginPhone = function(){
-
-  const phone = document.getElementById("phone").value;
-
-  window.recaptchaVerifier = new RecaptchaVerifier(
-    "recaptcha-container",
-    {
-      size: "normal"
-    },
-    auth
-  );
-
-  signInWithPhoneNumber(auth, phone, window.recaptchaVerifier)
-  .then((result)=>{
-      confirmationResult = result;
-      document.getElementById("message").innerHTML =
-      "Código enviado ✅";
-  })
-  .catch((error)=>{
-      document.getElementById("message").innerHTML =
-      error.message;
-  });
-}
-
-
-window.verifyCode = function(){
-
- const code = document.getElementById("code").value;
-
- confirmationResult.confirm(code)
- .then((result)=>{
-
-   document.getElementById("message").innerHTML =
-   "Usuario creado correctamente ✅";
-
- })
- .catch(()=>{
-   document.getElementById("message").innerHTML =
-   "Código incorrecto";
- });
-
-}
-
-</script>
-  console.log("Firebase conectado correctamente");
-</script>
 </body>
 </html>
-<div class="card">
-<h2>👤 Usuario</h2>
-<p>Bienvenido</p>
-<div class="card">
-<h2>📱 Crear cuenta</h2>
-
-<input id="phone" type="tel" placeholder="Número de teléfono"
-style="width:100%;padding:12px;border-radius:10px;border:none;">
-
-<button onclick="loginPhone()">
-Enviar código SMS
-</button>
-
-<div id="recaptcha-container"></div>
-
-<input id="code" type="text" placeholder="Código SMS"
-style="width:100%;padding:12px;border-radius:10px;border:none;margin-top:10px;">
-
-<button onclick="verifyCode()">
-Verificar código
-</button>
-
-<p id="message"></p>
-
-</div>
