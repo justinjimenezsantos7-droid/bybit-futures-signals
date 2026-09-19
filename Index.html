@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sello - Facturas Tamper-Proof con QR</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=TU_PAYPAL_CLIENT_ID&currency=USD"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased">
+  <nav class="border-b border-gray-800 p-4 flex justify-between items-center max-w-6xl mx-auto">
+    <div class="text-2xl font-bold text-indigo-500">Sello</div>
+    <div>
+      <a href="#precios" class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg font-medium">Comenzar</a>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto text-center my-16 px-4">
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Facturación Inalterable con Firma Digital y QR</h1>
+    <p class="text-gray-400 text-lg mb-8">Genera facturas seguras y verifica la autenticidad al instante en tu negocio.</p>
+    
+    <div id="precios" class="bg-gray-800 p-8 rounded-xl border border-gray-700 max-w-md mx-auto">
+      <h2 class="text-2xl font-bold mb-2">Plan Pro</h2>
+      <p class="text-3xl font-extrabold text-indigo-400 mb-6">$19 / mes</p>
+      <div id="paypal-button-container"></div>
+    </div>
+  </main>
+
+  <script>
+    if (window.paypal) {
+      paypal.Buttons({
+        createOrder: function() {
+          return fetch('/api/pagos/paypal/crear-orden', {
+            method: 'post',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ monto: '19.00', planNombre: 'Pro', userId: 'user_demo' })
+          }).then(res => res.json()).then(data => data.orderID);
+        },
+        onApprove: function(data) {
+          return fetch('/api/pagos/paypal/capturar', {
+            method: 'post',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ orderID: data.orderID, userId: 'user_demo', plan: 'Pro' })
+          }).then(res => res.json()).then(details => {
+            alert('¡Suscripción realizada con éxito!');
+          });
+        }
+      }).render('#paypal-button-container');
+    }
+  </script>
+</body>
+</html>
